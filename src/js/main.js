@@ -245,7 +245,6 @@ function passwordValidate(input1, input2){
         normalTextValidation(address, 'Address is required'),
         passwordValidate(password, confirmPassword)
     ];
-    console.log(fields)
     fields.forEach(el => {
         if(el == false){
           f.preventDefault()
