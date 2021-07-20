@@ -202,6 +202,18 @@ function genderValidate(feedBack){
   return true; 
 }
 
+function termsValidate(feedBack){
+    let terms = document.querySelector('#terms');
+    document.querySelector('#terms-feedback small').innerHTML= feedBack;
+    console.log(terms.value)
+    if(!terms.checked){
+        document.querySelector('#terms-feedback').classList.remove('d-none');
+      return false;
+    }
+    document.querySelector('#terms-feedback').classList.add('d-none');
+    return true; 
+  }
+
  function emailValidation(input, feedBack){
         
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -243,7 +255,8 @@ function passwordValidate(input1, input2){
         genderValidate('Gender is required'),
         normalTextValidation(talent, 'Talent is required'),
         normalTextValidation(address, 'Address is required'),
-        passwordValidate(password, confirmPassword)
+        passwordValidate(password, confirmPassword),
+        termsValidate('You must accept our terms')
     ];
     fields.forEach(el => {
         if(el == false){
