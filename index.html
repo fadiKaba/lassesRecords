@@ -171,43 +171,57 @@
                         </div>
                         <div class="form-block col-sm-12 col-md-6">
                             <label>Phone *</label>
-                            <input name="phone" class="form-control" placeholder="Enter Phone" />
+                            <input id="phone" name="phone" class="form-control" placeholder="Enter Phone" />
+                            <div id="phone-feedback" class="invalid-feedback">
+                              
+                            </div>
                         </div>
                         <div class="form-block col-sm-12 col-md-6">
-                            <label>Gender *</label><br />
+                            <label for="male">Gender *</label><br />
                             <div class="row gender" >
                                 <div>
-                                    <input type="radio" id="male" name="gender" value="male">
+                                    <input class="" type="radio" id="male" name="gender" value="male" >
                                     <label for="male">Male</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="female" name="gender" value="female">
+                                    <input class="" type="radio" id="female" name="gender" value="female" >
                                     <label for="female">Female</label>
                                 </div>
+                            </div>
+                            <div id="gender-feedback" class="text-danger d-none">
+                             <small></small> 
                             </div>
                 
                         </div>
                         <div class="form-block col-sm-12 col-md-6">
                             <label>Talent *</label>
-                            <select name="talent" class="form-control">
+                            <select id="talent" name="talent" class="form-control">
                                 <option value="">Select a talent</option>
                                 <option value="male">Singing</option>
                                 <option value="female">Dancing</option>
                                 <option value="others">Cooking</option>
                             </select>
+                            <div id="talent-feedback" class="invalid-feedback">
+                              
+                            </div>
                         </div>
                         <div class="form-block col-sm-12 col-md-12">
                             <label>Address *</label>
-                            <textarea name="address" class="form-control" placeholder="Enter Address">
-                            </textarea>
+                            <textarea id="address" name="address" class="form-control" placeholder="Enter Address"></textarea>
+                            <div id="address-feedback" class="invalid-feedback">
+                              
+                            </div>
                         </div>
                         <div class="form-block col-sm-12 col-md-6">
                             <label>Password *</label>
-                            <input name="password" class="form-control" type="password" placeholder="Password" />
+                            <input id="password" name="password" class="form-control" type="password" placeholder="Password" />
+                            <div id="password-feedback" class="invalid-feedback">
+                              
+                            </div>
                         </div>
                         <div class="form-block col-sm-12 col-md-6">
                             <label>Confirm Password *</label>
-                            <input name="confirmPassword" class="form-control" type="password" placeholder="Confirm Password" />
+                            <input id="confirm-password" name="confirmPassword" class="form-control" type="password" placeholder="Confirm Password" />
                         </div>
                         <div class="form-block col-sm-12 col-md-12 d-flex" style="justify-content: center; align-items: center;">
                             <input name="terms" type="checkbox"/>
