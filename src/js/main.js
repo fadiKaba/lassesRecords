@@ -212,6 +212,7 @@ function setCookie(cname, cvalue, exdays) {
         <td></td>
         <td></td>
         <td><span class="fw-bold">$${total}</span></td>
+        <td></td>
     </tr>`
     
  }
