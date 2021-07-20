@@ -13,13 +13,13 @@ const password = document.querySelector('#password');
 const confirmPassword = document.querySelector('#confirm-password');
 
 let products = [
-    {id: 1,name: 'product 1', price: 400, src: '../src/imgs/product1.jpeg'},
-    {id: 7,name: 'product 7', price: 200, src: '../src/imgs/product7.jpeg'},
-    {id: 2,name: 'product 2', price: 200, src: '../src/imgs/product2.jpeg'},
-    {id: 4,name: 'product 4', price: 250, src: '../src/imgs/product4.jpeg'},
-    {id: 5,name: 'product 5', price: 230, src: '../src/imgs/product5.jpeg'},
-    {id: 6,name: 'product 6', price: 350, src: '../src/imgs/product6.jpeg'},
-    {id: 3,name: 'product 3', price: 300, src: '../src/imgs/product3.jpeg'},
+    {id: 1,name: 'product 1', price: 400, src: 'src/imgs/product1.jpeg'},
+    {id: 7,name: 'product 7', price: 200, src: 'src/imgs/product7.jpeg'},
+    {id: 2,name: 'product 2', price: 200, src: 'src/imgs/product2.jpeg'},
+    {id: 4,name: 'product 4', price: 250, src: 'src/imgs/product4.jpeg'},
+    {id: 5,name: 'product 5', price: 230, src: 'src/imgs/product5.jpeg'},
+    {id: 6,name: 'product 6', price: 350, src: 'src/imgs/product6.jpeg'},
+    {id: 3,name: 'product 3', price: 300, src: 'src/imgs/product3.jpeg'},
 ];
 
 let cart = [];
