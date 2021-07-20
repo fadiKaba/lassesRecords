@@ -102,7 +102,12 @@ function addToCart(v, id){
     }
     v.setAttribute('src', 'src/ics/check.png')
     let index = products.findIndex(x => x.id == id);
-    cart.push(products[index]);
+    let cartEl = products[index];
+    cartEl.quantity = 1;
+    cart.push(cartEl);
+    // cart.forEach(er => {
+    //     er.quantity = 1;
+    // })
     setCookie('cart', JSON.stringify(cart), 2);
     setCartBadge(cart.length);
     fillCartContainer(cart);
@@ -160,9 +165,9 @@ function setCookie(cname, cvalue, exdays) {
                 <td><img class="cart-img" src="${crArr[i].src}" /></td>
                 <td>${crArr[i].name}</td>
                 <td>${crArr[i].price}</td>
-                <td>1</td>
+                <td><input class="form-control" min="1" style="max-width:80px;" onchange="setQuantity(this.value, ${crArr[i].id})" type="number" value="${crArr[i].quantity}"></td>
             <td>
-                <button class="btn btn-danger pb-1 px-2" onclick="removeFromCart(${crArr[i].id})"><img class="icon pb-1" src="src/ics/trash.png" alt=""></button>
+                <button class="btn btn-danger pb-1 px-2" step="1" onclick="removeFromCart(${crArr[i].id})"><img class="icon pb-1" src="src/ics/trash.png" alt=""></button>
             </td>
         </tr>
         `
@@ -263,6 +268,17 @@ function passwordValidate(input1, input2){
           f.preventDefault()
         }
     })
+ }
+
+ function setQuantity(v, id){
+  for(let i = 0; i < cart.length; i++){
+      if(cart[i].id == id){
+          if(v > 0){
+            cart[i].quantity = v;
+            setCookie('cart', JSON.stringify(cart), 2)
+          }
+      }
+  }
  }
 
 main();
