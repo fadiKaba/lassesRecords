@@ -115,20 +115,12 @@
                                 <th scope="col">Product Name</th>
                                 <th scope="col">Product Price</th>
                                 <th scope="col">Quantity</th>
+                                <th scope="col">Total Price</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row"></th>
-                                <td><img class="cart-img" src="/src/imgs/product3.jpeg" /></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <button class="btn btn-danger pb-1 px-2"><img class="icon pb-1" src="src/ics/trash.png" alt=""></button>
-                                </td>
-                              </tr>
+              
                         </tbody>
                     </table>
                 </div>
@@ -233,9 +225,33 @@
                         </div>
                 
                         <div class="form-block col-sm-12 d-flex" style="justify-content: center;">
-                            <input class="form-control col-sm-6 btn register-btn" onclick="formSubmit(event);" type="submit" value="Register" />
+                            <input 
+                            class="form-control col-sm-6 btn register-btn" 
+                            onclick="formSubmit(event);" 
+                            type="submit" 
+                            value="Register"
+                            data-bs-toggle="modal" 
+                            data-bs-target="#errors-container" />
                         </div>
                     </form>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="errors-container" tabindex="-1" aria-labelledby="errorsModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="errorsModalLabel">Fields marked with <span class="text-danger">*</span> are required</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <ul></ul>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
                 </div>
 
               </section>
