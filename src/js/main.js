@@ -36,9 +36,10 @@ let errors = [];
 function main(){
   showSection();
   checkCookie(cart);
-  fillProductsContainer(products);
+  productsContainer != null? fillProductsContainer(products): '';
   setCartBadge(cart.length);
   fillCartContainer(cart);
+ //cartContainer != null? fillCartContainer(cart): '';
 }
 
                      /* change Errors message here */
@@ -80,7 +81,7 @@ function showSection(){
         el.addEventListener('click', (e)=>{
             hidSections();
             document.querySelector('#'+el.getAttribute('id')).classList.add('active'); 
-            document.querySelector('#'+el.getAttribute('id')+'-container').classList.remove('d-none'); 
+          //  document.querySelector('#'+el.getAttribute('id')+'-container').classList.remove('d-none'); 
         });
     })
 }
