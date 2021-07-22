@@ -38,8 +38,7 @@ function main(){
   checkCookie(cart);
   productsContainer != null? fillProductsContainer(products): '';
   setCartBadge(cart.length);
-  fillCartContainer(cart);
- //cartContainer != null? fillCartContainer(cart): '';
+  cartContainer != null ?  fillCartContainer(cart) : '';
 }
 
                      /* change Errors message here */
@@ -127,7 +126,7 @@ function addToCart(v, id){
           setCookie('cart', JSON.stringify(cart), 2)
           v.setAttribute('src', 'src/ics/cart.png');
           setCartBadge(cart.length);
-          fillCartContainer(cart);
+          cartContainer != null ?  fillCartContainer(cart) : '';
           return;
         }
     }
@@ -138,13 +137,13 @@ function addToCart(v, id){
     cart.push(cartEl);
     setCookie('cart', JSON.stringify(cart), 2);
     setCartBadge(cart.length);
-    fillCartContainer(cart);
+    cartContainer != null ?  fillCartContainer(cart) : '';
 }
 
 function removeFromCart(id){
     cart = cart.filter(x => x.id != id);
     setCookie('cart', JSON.stringify(cart), 2);
-    fillCartContainer(cart);
+    cartContainer != null ?  fillCartContainer(cart) : '';
     productsContainer != null? fillProductsContainer(products): '';
     setCartBadge(cart.length);
 
@@ -334,7 +333,7 @@ function passwordValidate(input1, input2, feedBackPassword, feedBackConfirmation
           if(v > 0){
             cart[i].quantity = v;
             setCookie('cart', JSON.stringify(cart), 2);
-            fillCartContainer(cart)
+          cartContainer != null ?  fillCartContainer(cart) : '';
           }
       }
   }
