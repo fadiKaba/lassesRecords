@@ -145,7 +145,7 @@ function removeFromCart(id){
     cart = cart.filter(x => x.id != id);
     setCookie('cart', JSON.stringify(cart), 2);
     fillCartContainer(cart);
-    fillProductsContainer(products);
+    productsContainer != null? fillProductsContainer(products): '';
     setCartBadge(cart.length);
 
 }
